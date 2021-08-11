@@ -1,2 +1,2 @@
 # storeDP
-App que registra productos de una tienda
+App that registers products from a store
