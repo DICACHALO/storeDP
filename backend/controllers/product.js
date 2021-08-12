@@ -4,11 +4,11 @@ const registerProduct = async (req, res) => {
   if (!req.body.name || !req.body.code || !req.body.price)
     return res.status(401).send("You have to fill all the camps so please");
 
-  const existinProduct = await Product.findOne(
+  const existingProduct = await Product.findOne(
     { name: req.body.name } || { code: req.body.code }
   );
 
-  if (existinProduct)
+  if (existingProduct)
     return res.status(401).send("Sorry you have the same code and name");
 
   const product = new Product({
